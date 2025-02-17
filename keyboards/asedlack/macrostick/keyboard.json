@@ -1,0 +1,76 @@
+{
+    "keyboard_name": "Macrostick",
+    "manufacturer": "Alex Sedlack",
+    "maintainer": "asedlack",
+    "usb": {
+        "vid": "0xCB10",
+        "pid": "0x111C",
+        "device_version": "1.0.0"
+    },
+    "encoder": {
+        "rotary": [
+            {
+                "pin_a": "D7",  // ProMicro 6
+                "pin_b": "E6"   // ProMicro 7
+            }, {
+                "pin_a": "B4",  // ProMicro 8
+                "pin_b": "B5"   // ProMicro 9
+            }
+        ]
+    },
+    "ws2812": {
+        "pin": "D3"
+    },
+    "processor": "atmega32u4",
+    "bootloader": "caterina",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "encoder": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": false,
+        "rgb_matrix": false
+    },
+    "matrix_pins": {
+        "direct": [
+            [
+                "F4",   // ProMicro A3
+                "F5",   // ProMicro A2
+                "F6",   // ProMicro A1
+                "F7",   // ProMicro A0
+
+                "B1",   // ProMicro 15
+                "B3",   // ProMicro 14
+                "B2",   // ProMicro 16
+                "B6",   // ProMicro 10
+
+                "D1",   // ProMicro 2
+                "D0",   // ProMicro 3
+                "D4",   // ProMicro 4
+                "C6",   // ProMicro 5
+            ]
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"x":  0, "y": 0, "matrix": [0, 0]},
+                {"x":  1, "y": 0, "matrix": [0, 1]},
+                {"x":  2, "y": 0, "matrix": [0, 2]},
+                {"x":  3, "y": 0, "matrix": [0, 3]},
+            //         4 is a gap
+                {"x":  5, "y": 0, "matrix": [0, 4]},
+                {"x":  6, "y": 0, "matrix": [0, 5]},
+                {"x":  7, "y": 0, "matrix": [0, 6]},
+                {"x":  8, "y": 0, "matrix": [0, 7]},
+            //         9 is a gap
+                {"x": 10, "y": 0, "matrix": [0, 8]},
+                {"x": 11, "y": 0, "matrix": [0, 9]},
+                {"x": 12, "y": 0, "matrix": [0, 10]},
+                {"x": 13, "y": 0, "matrix": [0, 11]}
+            ]
+        }
+    }
+}
