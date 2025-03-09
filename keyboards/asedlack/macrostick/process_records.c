@@ -6,6 +6,33 @@ enum custom_keycodes {
   UC_DISA,         // ಠ_ಠ
   UC_IRNY,         // ⸮
   UC_CLUE,         // ‽
+  USERNAME,        // asedlack
+  EMAIL_1,         // asedlack96@gmail.com
+  EMAIL_2,         // asedlack@cfs.energy
+};
+
+// Process string shortcut inputs
+bool process_record_strings(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case USERNAME:
+      if (record->event.pressed) {
+       SEND_STRING("asedlack");
+      }
+      break;
+
+    case EMAIL_1:
+      if (record->event.pressed) {
+       SEND_STRING("asedlack96@gmail.com");
+      }
+      break;
+
+    case EMAIL_2:
+      if (record->event.pressed) {
+       SEND_STRING("asedlack@cfs.energy");
+      }
+      break;
+  }
+  return true;
 };
 
 // Process KVM inputs
