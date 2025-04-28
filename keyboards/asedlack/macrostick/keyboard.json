@@ -1,0 +1,84 @@
+{
+    "keyboard_name": "Macrostick",
+    "manufacturer": "Alex Sedlack",
+    "maintainer": "asedlack",
+    "usb": {
+        "vid": "0xCB10",
+        "pid": "0x111C",
+        "device_version": "1.0.0"
+    },
+    "encoder": {
+        "rotary": [
+            {
+                "pin_a": "D0",   // ProMicro 3
+                "pin_b": "D4",   // ProMicro 4
+            }, {
+                "pin_a": "D3",   // ProMicro TX
+                "pin_b": "D2",   // ProMicro RX
+            }
+        ]
+    },
+    "ws2812": {
+        "pin": "D3"
+    },
+    "processor": "atmega32u4",
+    "bootloader": "caterina",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "encoder": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": false,
+        "rgb_matrix": false
+    },
+    "matrix_pins": {
+        "direct": [
+            [
+                "F7",   // ProMicro A0
+                "F6",   // ProMicro A1
+
+                "F5",   // ProMicro A2
+                "F4",   // ProMicro A3
+                "B1",   // ProMicro 15
+                "B3",   // ProMicro 14
+
+                "B2",   // ProMicro 16
+                "B6",   // ProMicro 10
+
+                "B5",   // ProMicro 9
+                "B4",   // ProMicro 8
+                "E6",   // ProMicro 7
+                "D7",   // ProMicro 6
+
+                "C6",   // ProMicro 5
+                "D1",   // ProMicro 2
+            ]
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"x":  0, "y": 0, "matrix": [0, 0]},
+                {"x":  1, "y": 0, "matrix": [0, 1]},
+            //         2 is a gap
+                {"x":  3, "y": 0, "matrix": [0, 2]},
+                {"x":  4, "y": 0, "matrix": [0, 3]},
+                {"x":  5, "y": 0, "matrix": [0, 4]},
+                {"x":  6, "y": 0, "matrix": [0, 5]},
+            //         7 is a gap
+                {"x":  8, "y": 0, "matrix": [0, 6]},
+                {"x":  9, "y": 0, "matrix": [0, 7]},
+            //        10 is a gap
+                {"x": 11, "y": 0, "matrix": [0, 8]},
+                {"x": 12, "y": 0, "matrix": [0, 9]},
+                {"x": 13, "y": 0, "matrix": [0, 10]},
+                {"x": 14, "y": 0, "matrix": [0, 11]},
+            //        15 is a gap
+                {"x": 16, "y": 0, "matrix": [0, 12]},  // Rotary Encoder 1 Push
+                {"x": 17, "y": 0, "matrix": [0, 13]}   // Rotary Encoder 2 Push
+            ]
+        }
+    }
+}
